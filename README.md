@@ -2,13 +2,14 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|name|text|null:false|
+|name|string|null:false|
 |email|string|null:false|
 |pasward|string|null:false|
 
 ### Association
 - has_many : groups
 - has_many : messages, through: :members
+- has_many : mambers
 
 # Groupsテーブル
 
@@ -16,8 +17,7 @@
 |------|----|-------|
 |name|string|null:false|
 ### Association
-- has_many :members
-- has_many :messages
+- has_many :messages, through: :mambers
 
 # Membersテーブル
 
