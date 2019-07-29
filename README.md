@@ -1,4 +1,4 @@
-# Userテーブル
+# Usersテーブル
 
 |Column|Type|Options|
 |------|----|-------|
@@ -7,18 +7,17 @@
 |pasward|string|null:false|
 
 ### Association
-- has_many : group
-- has_many : message
+- has_many : groups
+- has_many : messages, through: :members
 
-# Groupテーブル
+# Groupsテーブル
 
 |Column|Type|Options|
 |------|----|-------|
-|name|text|null:false|
-|user_id|integer|null:false, foreign_key: true|
+|name|string|null:false|
 ### Association
-- has_many :menbers
-- has_many :message, through: :menbers
+- has_many :members
+- has_many :messages
 
 # Membersテーブル
 
@@ -31,14 +30,15 @@
 - belongs_to :group
 - belongs_to :user
 
-# Massageテーブル
+# Massagesテーブル
 
 |Column|Type|Options|
 |------|----|-------|
-|body|text|null:false|
-|image|string|null:false|
+|body|text||
+|image|string||
 |user_id|integer|null:false, foreign_key: true|
 |group_id|integer|null:false, foreign_key: true|
 
 ### Association
 - belongs_to :user
+- belongs_to :group
