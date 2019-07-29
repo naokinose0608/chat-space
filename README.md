@@ -17,7 +17,7 @@
 |------|----|-------|
 |name|string|null:false|
 ### Association
-- has_many :　messages, through: :mambers
+- has_many : messages, through: :mambers
 
 # Membersテーブル
 
