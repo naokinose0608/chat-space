@@ -1,4 +1,4 @@
-#Userテーブル
+# Userテーブル
 
 |Column|Type|Options|
 |------|----|-------|
@@ -10,7 +10,7 @@
 - has_many : group
 - has_many : message
 
-#Groupテーブル
+# Groupテーブル
 
 |Column|Type|Options|
 |------|----|-------|
@@ -20,7 +20,7 @@
 - has_many :menbers
 - has_many :message, through: :menbers
 
-#Membersテーブル
+# Membersテーブル
 
 |Column|Type|Options|
 |------|----|-------|
@@ -31,7 +31,7 @@
 - belongs_to :group
 - belongs_to :user
 
-#Massageテーブル
+# Massageテーブル
 
 |Column|Type|Options|
 |------|----|-------|
